@@ -7,6 +7,7 @@ body {
   background: url("./fundalQuiz2.jpg");
   background-repeat: no-repeat;
 }
+/* trebuie sa ma mai gandesc ce fac pt imagini... */
 
 /* body {
   background-image: linear-gradient(blue, yellow);
@@ -42,11 +43,13 @@ label {
 }
 /* ______________________________________________________________________________________________ */
 
+
+
 .intrebare1 {
   /* color: blue;
   background-color: azure;
   display: inline; */
-  background-image: url("./pexels-porapak-apichodilok-346885.jpg");
+  /* background-image: url("./pexels-porapak-apichodilok-346885.jpg"); */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -55,13 +58,21 @@ label {
   margin: 3rem;
   font-style: italic;
   color: blue;
-  visibility: visible;
+  visibility: visible; 
+  font-size: 2rem;
 }
 
 .intrebare1:hover {
   color: indianred;
   transform: translateX(1px);
   transition: ease 1s;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  width: 3em;
+  height: 3rem;
+  accent-color: green;
+  font-size: 2rem;
 }
 
 #nextQuestion {
