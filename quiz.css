@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: url("./fundalQuiz2.jpg");
+  background-repeat: no-repeat;
+}
+
+/* body {
+  background-image: linear-gradient(blue, yellow);
+} */
+
+h1,
+h2,
+form {
+  text-align: center;
+}
+
+form {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+button {
+  padding: 23px 45px;
+  color: chartreuse;
+  background-color: crimson;
+  border: yellow solid 1rem;
+  border-radius: 25%;
+}
+
+button:hover {
+  background-color: red;
+  color: white;
+  transform: translateY(-2px);
+}
+
+label {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* ______________________________________________________________________________________________ */
+
+.intrebare1 {
+  /* color: blue;
+  background-color: azure;
+  display: inline; */
+  background-image: url("./pexels-porapak-apichodilok-346885.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  padding: 25px;
+  margin: 3rem;
+  font-style: italic;
+  color: blue;
+  visibility: visible;
+}
+
+.intrebare1:hover {
+  color: indianred;
+  transform: translateX(1px);
+  transition: ease 1s;
+}
+
+#nextQuestion {
+  transform: translateY(150px);
+}
+/* __________________________________________________________________________________ */
+
+.intrebare-2 {
+  /* visibility: hidden; */
+  display: none;
+  transform: translateY(-450px);
+}
