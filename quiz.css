@@ -80,8 +80,11 @@ input[type="checkbox"] {
 }
 /* __________________________________________________________________________________ */
 
-.intrebare-2 {
-  /* visibility: hidden; */
+.intrebare-2{
   display: none;
   transform: translateY(-450px);
+}
+
+.intrebare-2_active {
+  background-color: red;
 }
