@@ -28,7 +28,11 @@ answer1.addEventListener('click', (event) => {
     }
       if (setAnswer == "Terra") {
           console.log(" the correct answer is 'Terra', yee");          
-      }  else {
+      } 
+      else if (setAnswer == undefined) {
+        console.log('no option chosen');
+      }
+       else {
           console.log("No, the correct answer was 'Terra'");
       }
 })
@@ -41,19 +45,22 @@ const answer2 = document.querySelector('#answer2');
 
 answer2.addEventListener('click', (event) => {
     event.preventDefault();
-    let checkboxes = document.querySelectorAll('input[name ="anul"]:checked')
+    let checkboxes = document.getElementsByClassName('anul');
 
-     let result = [];
-     checkboxes.forEach((checkbox) => {
-        result.push(checkbox.value);
-     })
-     console.log(result);
+    for (i = 0; i < 4; i++) {
 
- if (result == 1939) {
-    console.log("riiiight");
- } else {
-    console.log("trebuie sa aleg cv din lista, se fie bine");
- }
+      if (checkboxes[i].checked === true) {
+
+        console.log(checkboxes[i].value);
+         
+       }
+    
+    }
+
+        
+      
+
+ 
 
 })
 
