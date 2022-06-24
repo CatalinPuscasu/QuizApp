@@ -51,16 +51,9 @@ answer2.addEventListener('click', (event) => {
 
       if (checkboxes[i].checked === true) {
 
-         console.log(checkboxes[i].value); 
-
-           if (checkboxes[i].value == 1939 && checkboxes[1].value == 1987) {
-        console.log('cevaaaaaaaaaaaaaaaa');
-       }
+         console.log(`You chose + ${checkboxes[i].value}`); 
          
-       }
-
-     
-    
+       }    
     }
 })
 
