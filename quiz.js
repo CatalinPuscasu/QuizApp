@@ -12,6 +12,9 @@
 // -----------------------------------
 
 let quizContainer = document.querySelector('.quiz-container');
+quizContainer.style.Height = '34px';
+quizContainer.style.Width = '34px';
+quizContainer.classList.add('quiz-container');
 
 const questions = [
    question1 = {
@@ -26,7 +29,13 @@ const questions = [
    }
 ];
 
-console.log(questions[0].intrebare);
+function displayQuestions ()  {
+   let intrebare1 = '<p>' + questions[0].intrebare + '</p>';
+   let raspunsuri1 = '<input[type = radio]>' + questions[0].raspunsuri.text + '</input>';
+   quizContainer.innerHTML = intrebare1;
+  }
+
+  displayQuestions();
 
 
 
