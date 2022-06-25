@@ -1,61 +1,34 @@
 // ---------- Scroll to next question------------
 
-let button1 = document.getElementById('nextQuestion');
+// let button1 = document.getElementById('nextQuestion');
 
-button1.addEventListener('click', function (event) {
-event.preventDefault();
-let show = document.querySelector('.intrebare-2');
-show.classList.remove('intrebare-2');
-show.classList.add('intrebare-2_active');
-show.scrollIntoView({behavior : "smooth"});
-});
+// button1.addEventListener('click', function (event) {
+// event.preventDefault();
+// let show = document.querySelector('.intrebare-2');
+// show.classList.remove('intrebare-2');
+// show.classList.add('intrebare-2_active');
+// show.scrollIntoView({behavior : "smooth"});
+// });
 // -----------------------------------
 
-// ------------------ Validate question 1 answers-------------------
+let quizContainer = document.querySelector('.quiz-container');
 
-let answer1 = document.getElementById('answer1');
+const questions = [
+   question1 = {
+    id : 1,
+    intrebare : 'What is PHP?',
+    raspunsuri : [
+      {text : 'It is a backend language!'},
+      {text : 'It is just an acronym...'}
+    ],
+    raspunsCorect : {text : 'It is a backend language!'},
+     
+   }
+];
 
-const radioButtons = document.querySelectorAll('input[name = "planetei"]');
-
-answer1.addEventListener('click', (event) => {
-    event.preventDefault()
-    let setAnswer;
-    for (const radioButton of radioButtons) {
-        if (radioButton.checked) {
-            setAnswer = radioButton.value;
-            break;
-        }
-    }
-      if (setAnswer == "Terra") {
-          console.log(" the correct answer is 'Terra', yee");          
-      } 
-      else if (setAnswer == undefined) {
-        console.log('no option chosen');
-      }
-       else {
-          console.log("No, the correct answer was 'Terra'");
-      }
-})
-
-//  ----------------------------------------------------------
+console.log(questions[0].intrebare);
 
 
-const answer2 = document.querySelector('#answer2');
-
-
-answer2.addEventListener('click', (event) => {
-    event.preventDefault();
-    let checkboxes = document.getElementsByClassName('anul');
-
-    for (i = 0; i < 4; i++) {
-
-      if (checkboxes[i].checked === true) {
-
-         console.log(`You chose + ${checkboxes[i].value}`); 
-         
-       }    
-    }
-})
 
 
 
