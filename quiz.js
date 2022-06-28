@@ -1,59 +1,40 @@
-// ---------- Scroll to next question------------
 
-// let button1 = document.getElementById('nextQuestion');
+function createQuiz (questions, quizContainer, resultContainer, submit) {
 
-// button1.addEventListener('click', function (event) {
-// event.preventDefault();
-// let show = document.querySelector('.intrebare-2');
-// show.classList.remove('intrebare-2');
-// show.classList.add('intrebare-2_active');
-// show.scrollIntoView({behavior : "smooth"});
-// });
-// -----------------------------------
+ function showQuestions () {
 
-let quizContainer = document.querySelector('.quiz-container');
-quizContainer.style.Height = '34px';
-quizContainer.style.Width = '34px';
-quizContainer.classList.add('quiz-container');
-
-const questions = [
-   question1 = {
-    id : 1,
-    intrebare : 'What is PHP?',
-    raspunsuri : [
-      {text : 'It is a backend language!'},
-      {text : 'It is just an acronym...'}
-    ],
-    raspunsCorect : {text : 'It is a backend language!'},
+   let questions = [
+    {
+      question : "What is PHP?",
+      answers : {
+        a : 'It is a programming language for the back-end!',
+        b : 'Some acronym, I dunno',
+        c : 'It is one of those extensions in many sites...'
+      },
+      correctAnswer : 'a'
+    },
      
-   }
-];
+    {
+      question : 'Javascript was invented by :',
+      answers : {
+        a : 'Brendan Eich',
+        b : 'Steve Jobs',
+        c : 'Bill Gates'
+      },
+      correctAnswer : 'a'
 
-function displayQuestions ()  {
-   let intrebare1 = '<p>' + questions[0].intrebare + '</p>';
-   let raspunsuri1 = '<input[type = radio]>' + questions[0].raspunsuri.text + '</input>';
-   quizContainer.innerHTML = intrebare1;
-  }
+    }
+   ];
+ }
 
-  displayQuestions();
-
-
-
-
-
-
+}
 
 
 
 
 
-// de folosit mai tarziu
 
-// let submit = document.getElementById('submit');
 
-// submit.addEventListener('click', function() {
-//     let goodAnswers = 4;
-//    alert(`You have completed the test with ${goodAnswers} answers!`);
 
-// })
+
 
