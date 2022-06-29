@@ -54,7 +54,48 @@ function createQuiz (questions, quizContainer, resultContainer, submit) {
   quizContainer.innerHTML = questionsOutput.join('');
   
  } 
+    
+   function showResults (questions, quizContainer, resultContainer) {
+
+     let answersContainer = document.querySelectorAll('.answers');
+
+     let userAnswers = '';
+     let numCorrect = 0;
+
+     for (let i = 0; i < questions.length; i++) {
+
+      userAnswers = (answersContainer[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+
+      if (userAnswers === questions[i].correctAnswer) {
+      
+        numCorrect ++;
+
+        answersContainer[i].style.color = 'lightgreen';
+
+      } else {
+
+        answersContainer[i].style.color ='red';
+      }
+    }
+
+    resultContainer.innerHTML = numCorrect + ' out of ' + questions.length;
+
+   }
+
+   showQuestions(questions, quizContainer);
+
+   submit.onclick = function () {
+      
+    showResults(questions, quizContainer, resultContainer);
+
+   }
+
+
 }
+
+createQuiz(questions, quizContainer, resultContainer, submit);
+
+
 
 
 
