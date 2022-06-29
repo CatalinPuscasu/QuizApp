@@ -42,8 +42,12 @@ function createQuiz (questions, quizContainer, resultContainer, submit) {
 
      for (letter in questions[i].answers) {
 
-        answers.push('<label>' + '<input type= "radio" name="question">' + i + '" value=' + letter+'">'
-        + letter + ': ' + questions[i].answers[letter] + '</label>'
+        answers.push(
+          '<label>'
+            + '<input type="radio" name="question'+i+'" value="'+letter+'">'
+            + letter + ': '
+            + questions[i].answers[letter]
+          + '</label>'
         );
      }
      questionsOutput.push('<div class="question">' + questions[i].question + '</div>' + 
@@ -94,6 +98,15 @@ function createQuiz (questions, quizContainer, resultContainer, submit) {
 }
 
 createQuiz(questions, quizContainer, resultContainer, submit);
+
+let restartButton = document.getElementById('restart');
+
+const refreshPage = () => {
+
+  location.reload();
+}
+
+restartButton.addEventListener('click', refreshPage);
 
 
 
