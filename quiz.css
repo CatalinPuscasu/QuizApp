@@ -3,7 +3,48 @@
   margin: 0;
 }
 
+
 .quiz-container {
-  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 32rem;
+  min-height: 32rem;
 }
+
+input[type="radio"] {
+  width: 3em;
+  height: 3rem;
+  font-size: 2rem;
+}
+label {
+  margin-bottom: 5px;
+}
+
+.answers {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#submit {
+  width: 6rem;
+  height: 6rem;
+  margin-bottom: 2rem;
+}
+
+#restart {
+  width: 6rem;
+    height: 6rem;
+
+}
+
 
