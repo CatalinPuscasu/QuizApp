@@ -68,7 +68,7 @@ function createQuiz (questions, quizContainer, resultContainer, submit) {
         );
      }
      questionsOutput.push('<div class="question">' + questions[i].question + '</div>' + 
-     '<div class="answers">' + answers.join('') + '</div>' + '<button id="nextQuestion">To the next question! </button>'
+     '<div class="answers">' + answers.join('') + '</div>'
      );  
   }
 
@@ -87,19 +87,22 @@ function createQuiz (questions, quizContainer, resultContainer, submit) {
 
       userAnswers = (answersContainer[i].querySelector('input[name=question'+i+']:checked')||{}).value;
 
+      // Answers validation
+
       if (userAnswers === questions[i].correctAnswer) {
       
         numCorrect ++;
 
-        answersContainer[i].style.color = 'lightgreen';
+        answersContainer[i].style.color = 'green';
 
       } else {
 
         answersContainer[i].style.color ='red';
       }
     }
+    // to show the user's results
 
-    resultContainer.innerHTML = numCorrect + ' out of ' + questions.length;
+    alert(`You have answered correctly to ${numCorrect} questions out of ${questions.length}! If you wish to restart the quiz, just press the 'Restart the quiz!' button`);
 
    }
 
