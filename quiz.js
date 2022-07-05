@@ -3,6 +3,13 @@ let submit = document.getElementById('submit');
 let resultContainer = document.querySelector('.rezultate');
 
 
+// to create the next question button inside the answers div
+let nextQuestion = null;
+nextQuestion = nextQuestion === null ? document.createElement('button') : nextQuestion;
+nextQuestion.classList.add('nextQuestion');
+
+// list of questions
+
  let questions = [
     {
       question : "What is PHP?",
@@ -23,7 +30,17 @@ let resultContainer = document.querySelector('.rezultate');
       },
       correctAnswer : 'a'
 
-    }
+    },
+    {
+      question : 'What does I.T. stand for?',
+      answers : {
+        a : 'Informations and Transports',
+        b : 'Information Technology',
+        c : 'Technical Info'
+      },
+      correctAnswer : 'b'
+
+    },
    ];
 
 
@@ -51,7 +68,7 @@ function createQuiz (questions, quizContainer, resultContainer, submit) {
         );
      }
      questionsOutput.push('<div class="question">' + questions[i].question + '</div>' + 
-     '<div class="answers">' + answers.join('') + '</div>'
+     '<div class="answers">' + answers.join('') + '</div>' + '<button id="nextQuestion">To the next question! </button>'
      );  
   }
 
