@@ -41,6 +41,27 @@ nextQuestion.classList.add('nextQuestion');
       correctAnswer : 'b'
 
     },
+    {
+      question : 'What are Chrome, Edge, Firefox?',
+      answers : {
+        a : 'Just brands',
+        b : 'Some icons on my desktop',
+        c : 'Browsers'
+      },
+      correctAnswer : 'c'
+
+    },
+    {
+      question : '"Microsoft Word is :',
+      answers : {
+        a : 'A brand of speakers',
+        b : 'A software',
+        c : 'A type of keyboard'
+      },
+      correctAnswer : 'b'
+
+    },
+    
    ];
 
 
@@ -93,7 +114,7 @@ function createQuiz (questions, quizContainer, resultContainer, submit) {
       
         numCorrect ++;
 
-        answersContainer[i].style.color = 'green';
+        answersContainer[i].style.color = '#07fc03';
 
       } else {
 
