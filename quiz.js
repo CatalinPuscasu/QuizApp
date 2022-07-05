@@ -52,7 +52,7 @@ nextQuestion.classList.add('nextQuestion');
 
     },
     {
-      question : '"Microsoft Word is :',
+      question : '"Microsoft Word" is :',
       answers : {
         a : 'A brand of speakers',
         b : 'A software',
